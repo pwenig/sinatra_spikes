@@ -1,0 +1,7 @@
+<a href="/items/new">Add Item</a>
+
+<ul>
+  <% ItemsRepository.new.items.each do |item| %>
+    <li><%= item.name %> <a href="/item/<%= item.id %>">Show</a></li>
+  <% end %>
+</ul>
